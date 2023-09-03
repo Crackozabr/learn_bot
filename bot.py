@@ -1,9 +1,12 @@
 import logging
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
-
 import settings
-logging.basicConfig(filename='bot.log', level=logging.INFO) 
-        
+
+logging.basicConfig(filename='bot.log', 
+                    format='%(asctime)s:%(levelname)s:%(filename)s:%(funcName)s:%(message)s',
+                    datefmt='%Y-%m-%d %H:%M:%S',
+                    encoding='utf-8',
+                    level=logging.INFO) 
 
 def greet_user(update, context):
     # print(update)
